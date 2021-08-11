@@ -1,33 +1,14 @@
 import java.util.Scanner;
+public class cwa14TheCuriousCaseOfBenjaminBulbs {
+    public static  void main(String[] args){
 
-public class cwa13PythagoreanTriplet {
-    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
 
-        Scanner scan = new Scanner(System.in);
-        int a= scan.nextInt(), b=scan.nextInt(), c=scan.nextInt();
+        int n =scn.nextInt();
 
-        int max = a;
-        max= Math.max(a,b);
-        max=Math.max(max,c);
-
-        if(max==a)
-        {
-            Boolean pythagorean_triplet = ((b * b + c * c) == (a * a));
-            System.out.println(pythagorean_triplet);
+        for(int i=1; i*i<=n; i++){
+            System.out.println(i*i);
         }
-
-        else if(max==b)
-        {
-            Boolean pythagorean_triplet = ((a * a + c * c) == (b * b));
-            System.out.println(pythagorean_triplet);
-        }
-
-        else
-        {
-            Boolean pythagorean_triplet = ((b * b + a * a) == (c * c));
-            System.out.println(pythagorean_triplet);
-        }
-
 
     }
 }
