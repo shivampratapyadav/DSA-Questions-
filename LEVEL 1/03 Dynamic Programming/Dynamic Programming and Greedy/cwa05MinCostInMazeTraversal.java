@@ -57,13 +57,39 @@ public class cwa05MinCostInMazeTraversal{
 
         int maze[][] = new int[n][m];
 
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<arr[0].length;j++){
+        for(int i=0;i<maze.length;i++){
+            for(int j=0;j<maze[0].length;j++){
 
                 maze[i][j] = scn.nextInt();
             }
         }
 
+
+        int dp[][] = new int[n][m];
         
+
+        for(int i=n-1;i>=0;i--){
+
+            for(int j=m-1;j>=0;j--){
+
+                if(i==n-1 && j==m-1)
+                dp[n-1][m-1] = maze[n-1][m-1];
+
+                else if(i==n-1 && j<m-1){
+                    dp[i][j]=dp[i][j+1]+maze[i][j];
+                }
+
+                else if(i<n-1 && j==m-1){
+                    dp[i][j] = dp[i+1][j]+maze[i][j];
+                }
+
+                else{
+                    dp[i][j]= Math.min(dp[i][j+1],dp[i+1][j])+maze[i][j];
+                }
+            }
+        }
+
+        System.out.print(dp[0][0]);
+
     }
 }
