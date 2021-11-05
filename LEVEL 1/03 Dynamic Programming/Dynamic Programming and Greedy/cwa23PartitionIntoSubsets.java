@@ -36,9 +36,9 @@ Sample Output:
 
 */
 
-
+import java.io.*;
 import java.util.*;
-public class cwa23PartitionIntoSubsets {
+public class Main {
 
     public static void main(String[] args) throws Exception {
 

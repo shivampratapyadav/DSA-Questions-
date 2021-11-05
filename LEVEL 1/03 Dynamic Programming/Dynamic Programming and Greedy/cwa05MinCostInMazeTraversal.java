@@ -45,9 +45,9 @@ Sample Output:
 23
 
 */
-
+import java.io.*;
 import java.util.*;
-public class cwa05MinCostInMazeTraversal{
+public class Main{
     public static void main(String[] args)throws Exception{
 
         Scanner scn = new Scanner(System.in);

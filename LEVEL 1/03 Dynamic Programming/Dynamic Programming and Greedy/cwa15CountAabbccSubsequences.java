@@ -25,10 +25,9 @@ Sample Output:
 7
 
 */
-
+import java.io.*;
 import java.util.*;
-
-public class cwa15CountAabbccSubsequences {
+public class Main {
 
     public static void main(String[] args) throws Exception {
 

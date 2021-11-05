@@ -38,9 +38,9 @@ Sample Output:
 3
 
 */
-
+import java.io.*;
 import java.util.*;
-public class cwa14CountEncodings{
+public class Main{
     public static void main(String[] rags)throws Exception{
 
         Scanner scn = new Scanner(System.in);

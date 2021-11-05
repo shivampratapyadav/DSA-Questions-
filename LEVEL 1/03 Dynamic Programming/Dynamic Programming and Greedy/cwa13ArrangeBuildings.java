@@ -24,9 +24,9 @@ Sample Output:
 441
 
 */
-
+import java.io.*;
 import java.util.*;
-public class cwa13ArrangeBuildings {
+public class Main {
     public static void main(String[] args)throws Exception {
 
         Scanner scn = new Scanner(System.in);

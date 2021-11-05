@@ -32,8 +32,9 @@ Sample Output:
 8
 
 */
+import java.io.*;
 import java.util.*;
-public class cwa17PaintHouse {
+public class Main {
     public static void main(String[] args)throws Exception {
 
         Scanner scn = new Scanner(System.in);

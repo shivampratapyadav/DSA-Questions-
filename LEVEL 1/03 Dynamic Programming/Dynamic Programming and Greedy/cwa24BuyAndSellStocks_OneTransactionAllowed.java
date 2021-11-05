@@ -35,9 +35,9 @@ Sample Output:
 17
 
 */
-
+import java.io.*;
 import java.util.*;
-public class cwa24BuyAndSellStocks_OneTransactionAllowed{
+public class Main{
     public static void main(String[] args)throws Exception{
         Scanner scn = new Scanner(System.in);
 

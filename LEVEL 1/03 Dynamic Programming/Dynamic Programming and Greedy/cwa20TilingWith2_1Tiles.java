@@ -25,9 +25,9 @@ Sample Output:
 
 
 */
-
+import java.io.*;
 import java.util.*;
-public class cwa20TilingWith2_1Tiles {
+public class Main {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);

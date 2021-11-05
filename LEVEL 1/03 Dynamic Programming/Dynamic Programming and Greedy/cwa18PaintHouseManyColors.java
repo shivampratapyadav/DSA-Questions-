@@ -37,8 +37,9 @@ Sample Output:
 
 //N^3 cpmplexity solution:
 /*
+import java.io.*;
 import java.util.*;
-public class cwa18PaintHouseManyColors{
+public class Main{
     public static void main(String[] args)throws Exception{
         
     Scanner scn = new Scanner(System.in);
@@ -102,9 +103,9 @@ public class cwa18PaintHouseManyColors{
 */
 
 //N^2 Complexity Code:
-
+import java.io.*;
 import java.util.*;
-public class cwa18PaintHouseManyColors {
+public class Main {
 
     public static void main(String[] args)throws Exception {
         
