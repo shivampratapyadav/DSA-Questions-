@@ -2,20 +2,17 @@
 11-11-2021
 THURSDAY
 
-QUESTION -> Partition An Array :
+QUESTION -> Quick Select :
 
-1. You are given an array(arr) of integers and a pivot.
-2. You have to re-arrange the given array in such a way that all elements smaller or equal to pivot lie on the left side of pivot and all elements greater than pivot lie on its right side.
-3. You have to achieve this in linear time.
-
-Note -> For more information, watch question video.
+1. You are given an array(arr) of integers.
+2. You have to find the k-th smallest element in the given array using the quick-select algorithm.
 
 Input Format:
 An Integer n 
 arr1
 arr2..
 n integers
-An integer pivot.
+An integer k
 
 Output Format:
 Check the sample output and question video.
@@ -23,7 +20,7 @@ Check the sample output and question video.
 Constraints:
 1 <= N <= 100000
 -10^9 <= arr[i] <= 10^9
--10^9 <= pivot <= 10^9
+1 <= k <= N
 
 Sample Input:
 5
@@ -35,10 +32,12 @@ Sample Input:
 3
 
 Sample Output:
+pivot -> 3
 Swapping -2 and 7
 Swapping 1 and 7
 Swapping 3 and 4
--2 1 3 7 4 
+pivot index -> 2
+3
 
 */
 
@@ -47,9 +46,35 @@ import java.util.*;
 
 public class Main {
 
-  public static void partition(int[] arr, int pivot){
+  public static int quickSelect(int[] arr, int lo, int hi, int k) {
     //write your code here
+        int pi = partition(arr, arr[hi],lo,hi);
     
+    if(k>pi){
+        return quickSelect(arr, pi+1, hi, k);
+    }else if(k<pi){
+        return quickSelect(arr, lo, pi-1, k);
+    }else{
+        return arr[pi];
+
+    }
+
+  }
+
+  public static int partition(int[] arr, int pivot, int lo, int hi) {
+    System.out.println("pivot -> " + pivot);
+    int i = lo, j = lo;
+    while (i <= hi) {
+      if (arr[i] <= pivot) {
+        swap(arr, i, j);
+        i++;
+        j++;
+      } else {
+        i++;
+      }
+    }
+    System.out.println("pivot index -> " + (j - 1));
+    return (j - 1);
   }
 
   // used for swapping ith and jth elements of array
@@ -74,9 +99,8 @@ public class Main {
     for (int i = 0; i < n; i++) {
       arr[i] = scn.nextInt();
     }
-    int pivot = scn.nextInt();
-    partition(arr,pivot);
-    print(arr);
+    int k = scn.nextInt();
+    System.out.println(quickSelect(arr,0,arr.length - 1,k - 1));
   }
 
 }
